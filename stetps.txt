@@ -1,0 +1,21 @@
+Backend/
+
+    1.Instalaciones y Conectarse a la BD
+
+        npm init -y
+        npm i 
+            express
+            dotenv
+            mongoose
+
+        Crear cluster en Atlas
+
+            Username -> gabreseapp
+            Password -> andvtravel
+
+            IP Address -> 0.0.0.0
+            Copiar URI para conectarse desde una aplicacion y pegarlo en .env
+        
+        index.js -> Conectarse con mongoose a la bd
+
+        
