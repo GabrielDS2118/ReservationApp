@@ -54,7 +54,7 @@ routerHotels.get('/', async (req, res) => {
     const hotels = await Hotel.find();
     res.status(200).json(hotels);
   } catch (err) {
-    res.status(500).json(err);
+    next(err);
   }
 });
 export default routerHotels;

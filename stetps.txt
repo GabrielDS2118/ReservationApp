@@ -28,4 +28,13 @@ Backend/
         Agregar routes en index.js
 
     3.Node.js MongoDB CRUD Operations
-    
+
+    4.Middleware para errores
+
+        index.js
+            Hacemos Middleware que nos permitirá capturar cualquier error en cualquier ruta
+        
+        utils/ error.js
+            La función create error nos permite ser más especifos al mostrar el error,
+            status code y mensaje especifico
+
