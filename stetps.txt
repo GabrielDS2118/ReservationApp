@@ -38,3 +38,6 @@ Backend/
             La función create error nos permite ser más especifos al mostrar el error,
             status code y mensaje especifico
 
+    5.Carpeta Controllers
+        Separar la lógica de las consultas a la bd en los controladores
+        Llamar funciones controlador en routes
