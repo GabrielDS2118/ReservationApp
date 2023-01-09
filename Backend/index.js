@@ -2,6 +2,10 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 
+import routerAuth from './routes/auth.route.js';
+import routerHotels from './routes/hotels.route.js';
+import routerUsers from './routes/users.route.js';
+
 const app = express();
 dotenv.config();
 
@@ -22,7 +26,12 @@ mongoose.connection.on('connected', () => {
   console.log('mongoDb connected!');
 });
 
-app.listen(8800, () => {
+//Middlewares
+app.use('/api/auth', routerAuth);
+app.use('/api/users', routerUsers);
+app.use('/api/hotels', routerHotels);
+
+app.lHsten(8800, () => {
   connect();
   console.log('Connected to backend');
 });

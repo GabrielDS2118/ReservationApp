@@ -17,5 +17,12 @@ Backend/
             Copiar URI para conectarse desde una aplicacion y pegarlo en .env
         
         index.js -> Conectarse con mongoose a la bd
+    
+    2.Create Your First API using Node.js
 
-        
+        routes/
+            auth.route.js
+            hotels.route.js
+            users.route.js
+
+        Agregar routes en index.js
