@@ -27,11 +27,13 @@ mongoose.connection.on('connected', () => {
 });
 
 //Middlewares
+app.use(express.json());
+
 app.use('/api/auth', routerAuth);
 app.use('/api/users', routerUsers);
 app.use('/api/hotels', routerHotels);
 
-app.lHsten(8800, () => {
+app.listen(8800, () => {
   connect();
   console.log('Connected to backend');
 });
