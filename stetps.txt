@@ -41,3 +41,13 @@ Backend/
     5.Carpeta Controllers
         Separar la lógica de las consultas a la bd en los controladores
         Llamar funciones controlador en routes
+
+    6.Register y Login
+
+        npm i bcryptjs para encriptar la contraseña
+        
+        Controllers/auth.controller.js
+
+            login() ->
+                const { password, isAdmin, ...otherDetails } = user._doc;
+                ..otherDetails captura toda la informacion del usaurio menos password y isAdmin 
