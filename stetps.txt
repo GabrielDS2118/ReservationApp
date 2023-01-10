@@ -39,6 +39,8 @@ Backend/
             status code y mensaje especifico
 
     5.Carpeta Controllers
+
+
         Separar la lógica de las consultas a la bd en los controladores
         Llamar funciones controlador en routes
 
@@ -65,3 +67,35 @@ Backend/
     
         auth.controller.js
             Al hacer el login se pasará el token en la cookie
+        
+    8.Node.js JWT Role-Based Authorization Verification
+
+        Routes y Controllers de Users
+
+        Pruebas
+
+            users.route.js
+
+                Endpoints:
+                     '/checkauthentication' -> verifyToken()
+                     '/checkuser/:id'-> verifyUser()
+                     '/checkadmin' -> verifyAdmin()
+
+            utils/verifyToken.js
+
+                verifyToken()
+                    Verifica si hay un token y en caso de que así sea verifca que el token
+                    corresponda con el JWT_SECRET
+                
+                verifyUser()
+                    Comprueba que el id enviado como parámetro corresponde con el id guardado en el token
+                    En caso de que así sea el usuario podrá eliminar su cuenta
+                
+                verifyAdmin()
+                    Si el usuario es admin podrá eliminar todas las cuentas
+        
+
+        Poner verificaciones en lo0s routes de hotels y users
+                
+
+    
