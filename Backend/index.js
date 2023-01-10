@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import cookieParser from 'cookie-parser';
 
 import routerAuth from './routes/auth.route.js';
 import routerHotels from './routes/hotels.route.js';
@@ -27,6 +28,7 @@ mongoose.connection.on('connected', () => {
 });
 
 //Middlewares
+app.use(cookieParser());
 app.use(express.json());
 
 app.use('/api/auth', routerAuth);
