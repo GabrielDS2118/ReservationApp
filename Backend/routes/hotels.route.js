@@ -6,10 +6,15 @@ import {
   deleteHotel,
   getHotel,
   getAllHotels,
+  countByCity,
 } from '../controllers/hotel.controller.js';
 import { verifyAdmin } from '../utils/verifyToken.js';
 
 const routerHotels = express.Router();
+
+//GET ALL
+routerHotels.get('/', getAllHotels);
+routerHotels.get('/countByCity', countByCity);
 
 //CREATE
 routerHotels.post('/', verifyAdmin, createHotel);
@@ -22,8 +27,5 @@ routerHotels.delete('/:id', verifyAdmin, deleteHotel);
 
 //GET
 routerHotels.get('/:id', getHotel);
-
-//GET ALL
-routerHotels.get('/', getAllHotels);
 
 export default routerHotels;
