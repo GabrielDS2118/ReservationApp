@@ -97,5 +97,25 @@ Backend/
 
         Poner verificaciones en lo0s routes de hotels y users
                 
+    9.Model Relations
+
+        rooms.route.js
+            Endpoints que llaman a funciones controlador CRUD
+
+        room.controller.js
+
+            createRoom():
+                Al crear una room 
+                Se guardará el id de la room dentro el Array de las rooms del hotel con el id pasado como parámetro
+
+            deleteRoom():
+                Al eliminar una room también se eliminará de la lista de rooms del hotel
+            
+            updateRoomAvailability():
+                Se buscará el numero de la habitación y se agregarán las fechas enviadas en el body
+                En esas fechas ya no estará disponible ese numero de habitación
+
+        index.js -> app.use('/api/rooms', routerRoom);
+    
 
     
