@@ -118,10 +118,28 @@ Backend/
         index.js -> app.use('/api/rooms', routerRoom);
     
     11.Count By City
-        
+
+    12.Fecth Data
+        hotel.controller.js
+            countByType() -> Muestra la cantidad de cada tipo de hotel
+
 
 Frontend/  
+
     10.Clonar frontend
 
             git clone --single-branch -b "react-booking-ui" + url .
+    
+    12.Fecth Data
+
+        npm i axios
+
+        hooks/-> useFetch.js
+            Llmadas a la API
+        
+        components/featured.jsx
+            Mostrar countByCity llamando al useFetch()
+        
+        components/PropertyList.jsx
+            Mostrar countByType llamando al useFetch()
 

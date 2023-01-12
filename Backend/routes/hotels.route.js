@@ -7,6 +7,7 @@ import {
   getHotel,
   getAllHotels,
   countByCity,
+  countByType,
 } from '../controllers/hotel.controller.js';
 import { verifyAdmin } from '../utils/verifyToken.js';
 
@@ -15,6 +16,7 @@ const routerHotels = express.Router();
 //GET ALL
 routerHotels.get('/', getAllHotels);
 routerHotels.get('/countByCity', countByCity);
+routerHotels.get('/countByType', countByType);
 
 //CREATE
 routerHotels.post('/', verifyAdmin, createHotel);
