@@ -125,6 +125,8 @@ Backend/
     
     13.Query en endpoint de get('/hotels')
 
+    14.React Search using a Backend API
+
 
 Frontend/  
 
@@ -144,4 +146,6 @@ Frontend/
         
         components/PropertyList.jsx
             Mostrar countByType llamando al useFetch()
+    
+    14.React Search using a Backend API
 
