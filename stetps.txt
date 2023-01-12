@@ -122,6 +122,8 @@ Backend/
     12.Fecth Data
         hotel.controller.js
             countByType() -> Muestra la cantidad de cada tipo de hotel
+    
+    13.Query en endpoint de get('/hotels')
 
 
 Frontend/  
