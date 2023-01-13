@@ -149,3 +149,14 @@ Frontend/
     
     14.React Search using a Backend API
 
+    15.How to Use React Context API
+
+        src/context -> SearchContext.js
+            Informacion que se compartirá atravez de toda la aplicación
+            INITIAL_STATE -> Los valores al iniciar serán null
+            SearchReducer -> Funcion que cambia el estado
+        
+        
+        
+
+
