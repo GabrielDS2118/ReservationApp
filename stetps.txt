@@ -156,7 +156,20 @@ Frontend/
             INITIAL_STATE -> Los valores al iniciar serán null
             SearchReducer -> Funcion que cambia el estado
         
+        src/index.js
+            Envolver toda la aplicacion en el SearchContext
         
+        src/components/Header.jsx
+            Usar el SearchContext y el dispatch para cambiar los valores del Initial State con los 
+            filtros de destination, dates, options
+        
+        src/components/Hotel.jsx
+            Acceder a las fechas de reservacion para calcular las noches entre el rango de dates
+            Calcular el precio : cheapestPrice * noches * numero de habitaciones
         
 
 
+    16.React Login Auth Context API
+        Transmitir informacion del usuario por toda la aplicacion
+        Mostrar el username en el Navbar
+        Si no hay usaurio en el header mostar el boton para que se registre
