@@ -193,3 +193,15 @@ admin/
         npm i
         npm run start
 
+    19.Protected Routes
+
+        context/AuthContext.js
+
+        src/pages/login -> login.jsx
+            Si el usaurio no es admin se mostrará un mensaje que dice:
+            You are not allowed 
+        
+        src/App.js
+            ProtectedRoute({children})
+                Si no hay un usuario significa que no es admin y se redirecciona al login
+                En caso contrario se mostrará el children
