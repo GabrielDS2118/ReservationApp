@@ -169,8 +169,6 @@ Frontend/
             Acceder a las fechas de reservacion para calcular las noches entre el rango de dates
             Calcular el precio : cheapestPrice * noches * numero de habitaciones
         
-
-
     16.React Login Auth Context API
         Transmitir informacion del usuario por toda la aplicacion
         Mostrar el username en el Navbar
@@ -185,3 +183,13 @@ Frontend/
 
                 En caso contrario se agregará el id de la room en la lista (selectedRooms) y cada una de las
                 rooms en esa lista se les agregarán las fechas en las que se ha hecho la reservación
+
+admin/
+
+    18. Instalacion Admin
+        Ir a https://github.com/safak/youtube2022/tree/react-admin
+        Copiar url -> https://github.com/safak/youtube2022.git
+        git clone --single-branch -b "react-admin" + url .
+        npm i
+        npm run start
+
