@@ -14,8 +14,8 @@ import { useContext, useState } from 'react';
 import useFetch from '../../hooks/useFetch';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { SearchContext } from '../../context/SearchContext';
-// import { AuthContext } from '../../context/AuthContext';
-// import Reserve from '../../components/';
+import { AuthContext } from '../../context/AuthContext';
+import Reserve from '../../components/reserve/Reserve';
 
 const Hotel = () => {
   const location = useLocation();
@@ -27,7 +27,7 @@ const Hotel = () => {
   const { data, loading, error } = useFetch(
     `http://localhost:8800/api/hotels/${id}`
   );
-  // const { user } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const { dates, options } = useContext(SearchContext);
@@ -63,11 +63,11 @@ const Hotel = () => {
   };
 
   const handleClick = () => {
-    // if (user) {
-    //   setOpenModal(true);
-    // } else {
-    //   navigate('/login');
-    // }
+    if (user) {
+      setOpenModal(true);
+    } else {
+      navigate('/login');
+    }
   };
   return (
     <div>
@@ -152,7 +152,7 @@ const Hotel = () => {
           <Footer />
         </div>
       )}
-      {/* {openModal && <Reserve setOpen={setOpenModal} hotelId={id} />} */}
+      {openModal && <Reserve setOpen={setOpenModal} hotelId={id} />}
     </div>
   );
 };

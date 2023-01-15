@@ -127,6 +127,8 @@ Backend/
 
     14.React Search using a Backend API
 
+    17.Reservation
+        getHotelRooms() -> Retorna la lista de rooms por hotel
 
 Frontend/  
 
@@ -173,3 +175,13 @@ Frontend/
         Transmitir informacion del usuario por toda la aplicacion
         Mostrar el username en el Navbar
         Si no hay usaurio en el header mostar el boton para que se registre
+    
+    17.Reservation
+
+        Verifica disponibilidad
+            Verifica sin en el rango de fechas(allDates) hay alguna(some) fecha en que la habitacion 
+            ya este ocupada(unvailable):
+                En caso de que sea así el input estará disabled
+
+                En caso contrario se agregará el id de la room en la lista (selectedRooms) y cada una de las
+                rooms en esa lista se les agregarán las fechas en las que se ha hecho la reservación
