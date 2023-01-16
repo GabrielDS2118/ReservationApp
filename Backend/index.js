@@ -33,19 +33,19 @@ mongoose.connection.on('connected', () => {
 app.use(cookieParser());
 app.use(express.json());
 
-const whitelist = ['http://localhost:3000', 'http://localhost:8800'];
+// const whitelist = ['http://localhost:3000', 'http://localhost:8800'];
 
-const options = {
-  origin: (origin, callback) => {
-    if (whitelist.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('no permitido'));
-    }
-  },
-};
+// const options = {
+//   origin: (origin, callback) => {
+//     if (whitelist.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('no permitido'));
+//     }
+//   },
+// };
 
-app.use(cors(options));
+// app.use(cors(options));
 
 app.use('/api/auth', routerAuth);
 app.use('/api/users', routerUsers);

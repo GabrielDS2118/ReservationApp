@@ -129,6 +129,11 @@ Backend/
 
     17.Reservation
         getHotelRooms() -> Retorna la lista de rooms por hotel
+    
+    20.Fecth Data Admin Users
+        Crear en el modelo de Users más atributos 
+        Incluirlos en el controlador(...re.body) -> Register()
+        El navegador no esta leyendo la cookie,pasar token por un header
 
 Frontend/  
 
@@ -205,3 +210,12 @@ admin/
             ProtectedRoute({children})
                 Si no hay un usuario significa que no es admin y se redirecciona al login
                 En caso contrario se mostrará el children
+    
+
+    20.Fetch Data Admin Users
+        src/hooks/useFetch.js
+            Enviar token del usuario por un header
+
+        Datatable.jsx
+            La informacion ahora no serán datos fake, serán los usuarios de la aplicacion
+        

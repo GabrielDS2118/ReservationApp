@@ -2,10 +2,16 @@ import jwt from 'jsonwebtoken';
 import { createError } from '../utils/error.js';
 
 export const verifyToken = (req, res, next) => {
-  const token = req.cookies.acces_token;
+  let token = req.header('Authorization');
   if (!token) {
     return next(createError(401, 'You are not authenticated!'));
   }
+
+  if (token.startsWith('Bearer ')) {
+    token = token.slice(7, token.length).trimLeft();
+  }
+
+  console.log(token);
 
   jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
     if (err) return next(createError(403, 'Token is not valid!'));
@@ -25,7 +31,7 @@ export const verifyUser = (req, res, next) => {
 };
 
 export const verifyAdmin = (req, res, next) => {
-  verifyToken(req, res, () => {
+  verifyToken(req, res, next, () => {
     if (req.user.isAdmin) {
       next();
     } else {
