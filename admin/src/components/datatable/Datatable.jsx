@@ -7,7 +7,7 @@ import useFetch from '../../hooks/useFetch';
 import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
 
-const Datatable = () => {
+const Datatable = ({ columns, type }) => {
   const { user } = useContext(AuthContext);
   const token = user.token;
 
@@ -15,7 +15,12 @@ const Datatable = () => {
   const path = location.pathname.split('/')[1];
 
   const [list, setList] = useState([]);
-  const { data, loading, error } = useFetch('http://localhost:8800/api/users');
+
+  const title = `Add New ${type}`;
+
+  const { data, loading, error } = useFetch(
+    `http://localhost:8800/api/${path}`
+  );
   console.log(data);
 
   useEffect(() => {
@@ -58,7 +63,7 @@ const Datatable = () => {
   return (
     <div className="datatable">
       <div className="datatableTitle">
-        Add New User
+        {title}
         <Link to="/users/new" className="link">
           Add New
         </Link>
@@ -66,7 +71,7 @@ const Datatable = () => {
       <DataGrid
         className="datagrid"
         rows={list}
-        columns={userColumns.concat(actionColumn)}
+        columns={columns.concat(actionColumn)}
         pageSize={9}
         rowsPerPageOptions={[9]}
         checkboxSelection

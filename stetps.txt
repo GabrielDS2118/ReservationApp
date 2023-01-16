@@ -220,4 +220,7 @@ admin/
             La informacion ahora no serán datos fake, serán los usuarios de la aplicacion
     
     21.Delete Users
+
+    22.List 
+        La variable path nos ayuda a que el componente DataTable.jsx sea dinamico
         
