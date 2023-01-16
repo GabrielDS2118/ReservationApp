@@ -10,16 +10,15 @@ const useFetch = (url) => {
   const { user } = useContext(AuthContext);
 
   const token = user.token;
+  console.log(token);
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log('Tk ' + token);
       setLoading(true);
       try {
         const res = await axios.get(url, {
           headers: { Authorization: `Bearer ${token}` },
         });
-        console.log('Res ' + res.data);
         setData(res.data);
         // console.log(data);
       } catch (err) {

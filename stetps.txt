@@ -218,4 +218,6 @@ admin/
 
         Datatable.jsx
             La informacion ahora no serán datos fake, serán los usuarios de la aplicacion
+    
+    21.Delete Users
         

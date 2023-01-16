@@ -10,7 +10,6 @@ import useFetch from '../../hooks/useFetch';
 const Home = () => {
   const { data, loading, error } = useFetch('http://localhost:8800/api/users');
   console.log(data);
-
   return (
     <div className="home">
       <Sidebar />
